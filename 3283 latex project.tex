@@ -1,0 +1,81 @@
+\documentclass[12pt]{article}
+\usepackage{geometry}
+\usepackage{amsmath, amssymb, amsthm, mathrsfs, graphicx}
+
+\title{MATH 3283W Latex Project}
+\author{Amin Halimah}
+\date{}
+
+\begin{document}
+	
+	\maketitle
+	
+	\section*{Problem: 2.2.32}
+	
+	A relation R on a set $A$ is called \textbf{circular} if for all $a, b, c \in A, a$R$b$ and $b$R$c$ imply $c$R$a$. Prove: A relation is an equivalence relation if and only if it is reflexive and circular.
+	
+	\section*{Proof in the forward direction:}
+	
+	We must show that the relation R is symmetric and transitive. The reflexive requirement of an equivalence relation has already been fulfilled by the given proof statement, so we can assume that R is reflexive.
+	
+	\bigskip
+	\textbf{To show R is symmetric:}
+	
+	Given elements $a,b$ of a set $A$, suppose $a$R$b$. By the reflexive property provided, we know $b$R$b$ to be a valid relation on $A$. By the circular relation provided in the proof statement:
+	
+	$$ \text{$a$R$b$, $b$R$c$} \Rightarrow \text{$c$R$a$} $$
+
+	Since we know the reflexive property applies to R, we can let the second relation to be $b$R$b$:
+
+	$$	\text{$a$R$b$, $b$R$b$} \Rightarrow \text{$b$R$a$} $$
+	
+
+	This shows that, through applying the reflexive property, $a$R$b$ $\Rightarrow$ $b$R$a$; in other words, the symmetric property. So we can see that through the reflexive and circular properties of R, R must also be a symmetric relation.
+	
+	\bigskip
+	\textbf{To show R is transitive:}
+	
+	We will follow similar logic to show the transitivity of R. 
+	
+	Given elements $a,b,c$ of a set $A$, suppose $a$R$b$, $b$R$c$. Then, again by the circular property defined above, we can see:
+	
+	$$ \text{$a$R$b$, $b$R$c$} \Rightarrow \text{$c$R$a$} $$
+
+	By the symmetric property we have shown above, we can directly see that for any elements $d,e$ of a set A, $d$R$e$ implies $e$R$d$. So we can apply that to our own relation of $c$R$a$ to arrive at the result $a$R$c$. So we have shown the transitive property to be valid on this reflexive circular relation as well.
+	
+	Thus, by showing the relation R that is defined as both reflexive and circular to also be symmetric and transitive, we have shown it to be a valid equivalence relation.
+	
+	
+	\section*{Proof in the reverse direction:}
+	
+	We must show that a relation R is reflexive and circular if it is an equivalence relation. So let us assume R is an equivalence relation.
+	
+	 
+	 \bigskip
+	 \textbf{To show R is reflexive:}
+	 
+	 This is implied directly through the proof statement. Since R is an equivalence relation, we know it must be reflexive, given that equivalence relations must be transitive, symmetric, and reflexive.
+	 
+	 \bigskip
+	 \textbf{To show R is circular:}
+	 
+	 Let the elements $a,b,c$ be of a set $A$, and R is an equivalence relation on $A$. Then it follows that, 
+	 
+	 By the reflexive property:
+	 $$ \text{$a$R$a$} \Rightarrow \text{$a$R$a$} $$
+	 
+	 By the symmetric property:
+	 $$ \text{$a$R$b$} \Rightarrow \text{$b$R$a$} $$
+	 
+	 By the transitive property:
+	 $$ \text{$a$R$b$, $b$R$c$} \Rightarrow \text{$a$R$c$} $$
+	 	 
+	Let $c$ = $a$. Then we have $a$R$b$, $b$R$c$ $\Rightarrow$ $a$R$c$. Since $a$ = $c$, then the equivalent expression would be $a$R$a$, which is valid under the reflexive property. This relation adheres to the defined circular relation in the problem, and as such we have proven R to be circular.
+	
+	
+	\bigskip
+	Thus, we have shown that if a relation R is an equivalence relation, it must also be reflexive and circular.
+	
+	
+	
+\end{document}
